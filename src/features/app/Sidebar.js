@@ -13,12 +13,15 @@ import {
   Announcement,
   Home,
 } from "@material-ui/icons";
+import { useHistory } from "react-router-dom";
 
 export default function Sidebar({ toggleSidebar, state }) {
+  const history = useHistory();
+
   return (
     <Drawer anchor="left" open={state} onClose={toggleSidebar}>
       <List component="nav" aria-label="Authentication About Us Public Board">
-        <ListItem button>
+        <ListItem onClick={() => history.push("/")} button>
           <ListItemIcon>
             <Home />
           </ListItemIcon>

@@ -1,8 +1,11 @@
 import { Box, CircularProgress } from "@material-ui/core";
 import { lazy, Suspense } from "react";
 import Navbar from "./Navbar";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+
+const Home = lazy(() => import("../home"));
+const NotFound = lazy(() => import("../404"));
 
 const useStyles = makeStyles({
   main: {
@@ -14,8 +17,6 @@ const useStyles = makeStyles({
   },
 });
 
-const Home = lazy(() => import("../home"));
-
 const Root = () => {
   const classes = useStyles();
   return (
@@ -26,7 +27,12 @@ const Root = () => {
           <CircularProgress className={classes.spinner} color="secondary" />
         }
       >
-        <Route path="/" component={Home} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
       </Suspense>
     </Box>
   );

@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -20,10 +21,13 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    cursor: "pointer",
   },
 }));
 
 export default function Navbar() {
+  const history = useHistory();
+
   // for sidebar
   const [state, setState] = useState(false);
 
@@ -61,7 +65,11 @@ export default function Navbar() {
                 <MenuIcon />
               </IconButton>
             )}
-            <Typography variant="h6" className={classes.title}>
+            <Typography
+              onClick={() => history.push("/")}
+              variant="h5"
+              className={classes.title}
+            >
               FNR Forum
             </Typography>
             {matches && <Links />}
