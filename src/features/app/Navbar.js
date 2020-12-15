@@ -62,7 +62,7 @@ export default function Navbar() {
               </IconButton>
             )}
             <Typography variant="h6" className={classes.title}>
-              Fake News Reporting Forum
+              FNR Forum
             </Typography>
             {matches && <Links />}
           </Toolbar>

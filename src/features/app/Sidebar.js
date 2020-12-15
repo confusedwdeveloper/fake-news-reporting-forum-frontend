@@ -6,12 +6,25 @@ import {
   ListItemIcon,
   Divider,
 } from "@material-ui/core";
-import { LockOpen, ExitToApp, Info, Announcement } from "@material-ui/icons";
+import {
+  LockOpen,
+  ExitToApp,
+  Info,
+  Announcement,
+  Home,
+} from "@material-ui/icons";
 
 export default function Sidebar({ toggleSidebar, state }) {
   return (
     <Drawer anchor="left" open={state} onClose={toggleSidebar}>
       <List component="nav" aria-label="Authentication About Us Public Board">
+        <ListItem button>
+          <ListItemIcon>
+            <Home />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItem>
+        <Divider />
         <ListItem button>
           <ListItemIcon>
             <Info />
