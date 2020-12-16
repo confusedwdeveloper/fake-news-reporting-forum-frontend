@@ -28,7 +28,7 @@ export default function Sidebar({ toggleSidebar, state }) {
           <ListItemText primary="Home" />
         </ListItem>
         <Divider />
-        <ListItem button>
+        <ListItem button onClick={() => history.push("/about-us")}>
           <ListItemIcon>
             <Info />
           </ListItemIcon>

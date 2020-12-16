@@ -9,7 +9,9 @@ export default function Links() {
       <Button onClick={() => history.push("/")} color="inherit">
         Home
       </Button>
-      <Button color="inherit">About Us</Button>
+      <Button onClick={() => history.push("/about-us")} color="inherit">
+        About Us
+      </Button>
       <Button color="inherit">Public Board</Button>
       <Button color="inherit">Login</Button>
     </>
