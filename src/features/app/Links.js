@@ -13,7 +13,9 @@ export default function Links() {
         About Us
       </Button>
       <Button color="inherit">Public Board</Button>
-      <Button color="inherit">Login</Button>
+      <Button onClick={() => history.push("/sign-in")} color="inherit">
+        Login
+      </Button>
     </>
   );
 }

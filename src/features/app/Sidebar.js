@@ -42,7 +42,7 @@ export default function Sidebar({ toggleSidebar, state }) {
           <ListItemText primary="Public Board" />
         </ListItem>
         <Divider />
-        <ListItem button>
+        <ListItem button onClick={() => history.push("/sign-in")}>
           <ListItemIcon>
             <LockOpen />
           </ListItemIcon>

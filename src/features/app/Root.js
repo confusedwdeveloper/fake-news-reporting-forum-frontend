@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const Home = lazy(() => import("../home"));
 const NotFound = lazy(() => import("../404"));
 const AboutUs = lazy(() => import("../about-us"));
+const SignIn = lazy(() => import("../sign-in"));
 
 const useStyles = makeStyles({
   main: {
@@ -32,6 +33,9 @@ const Root = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/about-us">
             <AboutUs />
+          </Route>
+          <Route exact path="/sign-in">
+            <SignIn />
           </Route>
           <Route>
             <NotFound />
