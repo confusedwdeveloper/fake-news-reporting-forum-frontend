@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import img from "./pexels-produtora-midtrack-3422053.jpg";
+import img from "../../assets/pexels-produtora-midtrack-3422053.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {

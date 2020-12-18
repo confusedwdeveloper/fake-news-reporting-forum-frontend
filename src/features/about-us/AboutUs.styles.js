@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import img from "./max-muselmann-9NXdr0gDKgw-unsplash.jpg";
+import img from "../../assets/max-muselmann-9NXdr0gDKgw-unsplash.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
